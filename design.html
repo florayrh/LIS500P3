@@ -1,0 +1,64 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Introduction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="objective.html">Project Name & Objective</a>
+        <a href="machine_learning.html">What is Machine Learning</a>
+        <a href="design.html">Design Process</a>
+        <a href="lessons.html">Lessons Learned</a>
+        <a href="try.html">Try the Project</a>
+    </nav>
+    <main>
+        <h1>Explore Our Teachable Machines Project</h1>
+        <div class="model-button-container">
+            <p>This is our model. Click to take a look.</p>
+            <a href="https://teachablemachine.withgoogle.com/models/YS8x2ree7/" target="_blank" class="button-link">View the Model</a>
+        </div>
+        <p>
+            Our project focuses on developing a teachable machine capable of image recognition. The machine is trained using images of masks, thermometers, and medicines, employing supervised learning models and neutral category recognition for classification. The training images for the teachable machine were carefully selected, representing most types of these three categories to enhance recognition capabilities. By creating this system, our goal is not only to complete technical tasks but also to leverage technology to enhance public awareness of medical items, making the project more meaningful in real-world applications.
+        </p>
+        <h2>Process</h2>
+        <h3>1. Category Selection and Data Collection</h3>
+        <p>
+            We selected three categories—masks, thermometers, and medicines—for training our model. To ensure diversity and inclusivity, we collected training images from various sources, firstly from internet. We chose images represented objects from different regions worldwide, capturing variations in design, color, and shape. 
+        </p>
+       
+        <p>
+            Additionally, we used a mix of webcam-recorded images and curated samples to ensure the training data included multiple angles and lighting conditions. This robust dataset was essential for enhancing the model's recognition capabilities.
+        </p>
+        <p>
+            As for medcines category, we only take into consideration of pills without inclduing liquid or cream medcines since pills are the most common in out daily life for adults.
+        <div class="image-container">
+            <img src="Process1.jpg" alt="Process 1: Data Collection" />
+        </div>
+        <h3>2. Preprocessing and Training</h3>
+        <p>
+            The training process involved preprocessing the images to remove noise and standardize dimensions. We conducted the training against a neutral background to teach the machine to focus on identifying the target objects, ignoring irrelevant factors. This process ensured the classifier's robustness in recognizing items in real-world settings.
+        </p>
+        <p>
+            Several iterations of training were performed, refining the model's ability to accurately distinguish between categories. This iterative process involved analyzing the model's performance and making adjustments to optimize its learning.
+        </p>
+        <div class="image-container">
+            <img src="Process2.jpg" alt="Process 2: Model Training" />
+        </div>
+        <h3>3. Model Testing and Deployment</h3>
+        <p>
+            After training, the model underwent extensive testing using a separate dataset to evaluate its accuracy and reliability. 
+        </p>
+        <p>
+            On the website, users can upload images or use their webcam to test the model, allowing them to experience the application firsthand. 
+        </p>
+    </main>
+    <footer>
+        &copy; 2024 LIS Project 3. Medical Supplies Classifier by Ruihan YANG, Wensha NIE, and Keke SONG.
+    </footer>
+</body>
+</html>
+
