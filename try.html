@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 
+        Metadata for the webpage:
+        - UTF-8 encoding ensures proper rendering of text.
+        - Responsive design is enabled with the viewport meta tag.
+        - Title set to "Try the Project" to represent the page's content.
+        - Links to the external stylesheet for consistent styling.
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Try the Project</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- 
+        Navigation menu:
+        - Provides links to all major sections of the website.
+        - Ensures uniform navigation across pages for a seamless experience.
+    -->
     <nav>
         <a href="index.html">Home</a>
         <a href="objective.html">Project Name & Objective</a>
@@ -15,17 +27,36 @@
         <a href="lessons.html">Lessons Learned</a>
         <a href="try.html">Try the Project</a>
     </nav>
+    
     <main>
-        <h1>Test the Model in Real Time</h1>
+        <!-- 
+            Main header:
+            - Highlights the functionality for real-time model testing.
+            - Encourages users to interact with the project via webcam.
+        -->
+        <h1>Try the Model</h1>
         <p>
-            Below, you can test our Teachable Machine model directly in your browser. The model has been trained to classify masks, thermometers, and medicines. Turn on your webcam and try it out!
+            Below, you can test our Teachable Machine model directly in your browser. 
+            The model classifies objects into three categories: masks, thermometers, and medicines.
+            Turn on your webcam and try it out!
         </p>
+        
+        <!-- 
+            Sketch container:
+            - Integrates the interactive ML model into the webpage using p5.js and ml5.js.
+            - Loads 'sketch.js' for functionality to classify real-time video from the webcam.
+        -->
         <div class="sketch-container">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/ml5@0.6.0/dist/ml5.min.js"></script>
             <script src="sketch.js"></script>
         </div>
     </main>
+    
+    <!-- 
+        Footer section:
+        - Displays project credits and authorship.
+    -->
     <footer>
         &copy; LIS 500 Project 3. Ruihan YANG, Wensha NIE, and Keke SONG.
     </footer>
