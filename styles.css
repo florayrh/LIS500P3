@@ -1,3 +1,11 @@
+/* 
+    Body Styles:
+    - Sets a default font family to 'Arial' with fallback to sans-serif.
+    - Removes default margins and paddings for a clean slate.
+    - Applies a light background color for a soft, neutral appearance.
+    - Uses a flexbox layout to stack content vertically and ensure the footer stays at the bottom.
+    - Sets a line-height for better readability.
+*/
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -10,6 +18,13 @@ body {
     line-height: 1.6;
 }
 
+/* 
+    Header Styles:
+    - Background color gives a soft blue accent.
+    - Bold uppercase text ensures prominence.
+    - Adds a shadow effect for depth.
+    - Centers the content horizontally and vertically.
+*/
 header {
     background-color: #BFD7ED;
     color: #333;
@@ -21,7 +36,12 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
+/* 
+    Navigation Bar:
+    - Sticks the navigation bar at the top of the viewport.
+    - Flexbox layout centers and aligns navigation links horizontally.
+    - Adds a subtle shadow to distinguish it from the main content.
+*/
 nav {
     background-color: #BFD7ED;
     display: flex;
@@ -35,6 +55,11 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* 
+    Navigation Links:
+    - Adds padding and a border-radius for clickable buttons.
+    - Applies hover effects with smooth color and background transitions.
+*/
 nav a {
     color: #4CAF50;
     text-decoration: none;
@@ -51,8 +76,11 @@ nav a:hover {
     color: #333;
 }
 
-
-/* Welcome Section */
+/* 
+    Welcome Section:
+    - A visually prominent section with a green background to highlight the welcome message.
+    - Centers content and applies a shadow for depth.
+*/
 .welcome-section {
     background-color: #D8F3DC;
     color: #333;
@@ -73,7 +101,12 @@ nav a:hover {
     color: #4CAF50;
 }
 
-/* Main content */
+/* 
+    Main Content:
+    - Centers the content within a specified maximum width.
+    - Adds padding, a white background, and rounded corners for a clean, card-like appearance.
+    - Applies a shadow to make the content stand out.
+*/
 main {
     padding: 30px;
     max-width: 800px;
@@ -84,7 +117,11 @@ main {
     flex: 1;
 }
 
-/* Headings */
+/* 
+    Headings:
+    - Applies consistent green text for all headings.
+    - Aligns text to the center for uniformity.
+*/
 h1, h2 {
     color: #4CAF50;
     text-align: center;
@@ -100,7 +137,11 @@ h2 {
     margin-top: 40px;
 }
 
-/* Paragraphs */
+/* 
+    Paragraphs:
+    - Sets font size and line height for readability.
+    - Justifies text for a clean, professional layout.
+*/
 p {
     font-size: 1.2em;
     line-height: 1.8;
@@ -109,7 +150,11 @@ p {
     text-align: justify;
 }
 
-/* Lists */
+/* 
+    Lists:
+    - Provides indentation for list items.
+    - Ensures consistent spacing between items.
+*/
 ul {
     font-size: 1.2em;
     margin-bottom: 20px;
@@ -120,7 +165,11 @@ ul li {
     margin-bottom: 10px;
 }
 
-/* Footer */
+/* 
+    Footer:
+    - Matches the header color scheme for a cohesive design.
+    - Centers text and adds padding for readability.
+*/
 footer {
     background-color: #BFD7ED;
     color: #333;
@@ -130,7 +179,11 @@ footer {
     margin-top: auto;
 }
 
-/* Buttons */
+/* 
+    Buttons and Links:
+    - Styles buttons and links consistently with green backgrounds and white text.
+    - Adds hover effects for interactivity.
+*/
 button, .button-link {
     background-color: #4CAF50;
     color: white;
@@ -151,12 +204,10 @@ button:hover, .button-link:hover {
     color: #333;
 }
 
-/* Video container */
-.video-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
+/* 
+    Video Container:
+    - Centers the video and ensures responsiveness with rounded corners and shadows.
+*/
 .video-container iframe {
     width: 100%;
     height: 400px;
@@ -165,19 +216,11 @@ button:hover, .button-link:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Links */
-a {
-    color: #4CAF50;
-    text-decoration: underline;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #FFD700;
-}
-
-/* Tables */
+/* 
+    Tables:
+    - Adds borders and alternating row colors for better readability.
+    - Highlights headers with a golden background.
+*/
 table {
     width: 100%;
     border-collapse: collapse;
@@ -201,11 +244,10 @@ table tr:nth-child(even) {
     background-color: #FDFCE5;
 }
 
-.image-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
+/* 
+    Image Container:
+    - Centers images and ensures they are responsive with rounded corners and shadows.
+*/
 .image-container img {
     max-width: 100%;
     height: auto;
@@ -213,40 +255,12 @@ table tr:nth-child(even) {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.model-button-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.button-link {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.button-link:hover {
-    background-color: #FFD700;
-    color: #333;
-}
-
+/* 
+    Sketch Container:
+    - Centers the interactive canvas for consistency.
+*/
 .sketch-container {
     text-align: center;
     margin: 20px auto;
 }
 
-
-.video-container {
-    text-align: center;
-    margin: 20px auto;
-}
-
-iframe {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}

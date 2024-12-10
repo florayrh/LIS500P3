@@ -1,12 +1,24 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 
+        Document Metadata:
+        - Specifies UTF-8 encoding for text rendering to ensure compatibility with various languages and symbols.
+        - Includes a viewport meta tag for responsive design, enabling the site to display correctly on different screen sizes.
+        - Sets the title to "Project Introduction" for identification in browser tabs.
+        - Links to an external stylesheet 'styles.css' to maintain consistent styling across the website.
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Introduction</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- 
+        Navigation Bar:
+        - Provides links to different sections of the project website for seamless navigation.
+        - Ensures a consistent structure across all pages to enhance user experience.
+    -->
     <nav>
         <a href="index.html">Home</a>
         <a href="objective.html">Project Name & Objective</a>
@@ -15,47 +27,79 @@
         <a href="lessons.html">Lessons Learned</a>
         <a href="try.html">Try the Project</a>
     </nav>
+    
     <main>
+        <!-- 
+            Main Section:
+            - Introduces the project with an H1 title, providing a welcoming and engaging overview.
+            - Contains a button linking to the teachable machine model for users to explore.
+        -->
         <h1>Explore Our Teachable Machines Project</h1>
         <div class="model-button-container">
             <p>This is our model. Click to take a look.</p>
-            <a href="https://teachablemachine.withgoogle.com/models/YS8x2ree7/" target="_blank" class="button-link">View the Model</a>
+            <a href="https://teachablemachine.withgoogle.com/models/r-SgIuQ2G/" target="_blank" class="button-link">View the Model</a>
         </div>
+        
+        <!-- 
+            Project Overview:
+            - Provides a detailed description of the teachable machine's purpose and functionality.
+            - Explains the rationale behind selecting masks, thermometers, and medicines for the project.
+            - Highlights the broader goal of enhancing public awareness through technology.
+        -->
         <p>
             Our project focuses on developing a teachable machine capable of image recognition. The machine is trained using images of masks, thermometers, and medicines, employing supervised learning models and neutral category recognition for classification. The training images for the teachable machine were carefully selected, representing most types of these three categories to enhance recognition capabilities. By creating this system, our goal is not only to complete technical tasks but also to leverage technology to enhance public awareness of medical items, making the project more meaningful in real-world applications.
         </p>
+        
+        <!-- 
+            Process Section:
+            - Divides the project process into three parts: Data Collection, Preprocessing and Training, and Model Testing and Deployment.
+            - Each step is clearly explained, providing insights into the methodology.
+        -->
         <h2>Process</h2>
         <h3>1. Category Selection and Data Collection</h3>
         <p>
-            We selected three categories—masks, thermometers, and medicines—for training our model. To ensure diversity and inclusivity, we collected training images from various sources, firstly from internet. We chose images represented objects from different regions worldwide, capturing variations in design, color, and shape. 
-        </p>
-       
-        <p>
-            Additionally, we used a mix of webcam-recorded images and curated samples to ensure the training data included multiple angles and lighting conditions. This robust dataset was essential for enhancing the model's recognition capabilities.
+            We selected three categories—masks, thermometers, and medicines—for training our model. Each category has 87 photos to ensure fairness. To ensure diversity and inclusivity, we collected training images from various sources. Firstly from internet. We chose images representing objects from different regions worldwide, capturing variations in design, color, and shape. 
+            Additionally, we used a mix of webcam-recorded images and curated samples to ensure the training data included multiple angles and lighting conditions. 
+            This robust dataset was essential for enhancing the model's recognition capabilities.
         </p>
         <p>
-            As for medcines category, we only take into consideration of pills without inclduing liquid or cream medcines since pills are the most common in out daily life for adults.
+            It is important to mention that, as for medicines category, we only take into consideration pills and pill packages without including liquid or cream medicines since pills are the most common in our daily life for adults.
+        </p>
         <div class="image-container">
+            <!-- Image of the data collection process for visual context -->
             <img src="Process1.jpg" alt="Process 1: Data Collection" />
         </div>
         <h3>2. Preprocessing and Training</h3>
         <p>
-            The training process involved preprocessing the images to remove noise and standardize dimensions. We conducted the training against a neutral background to teach the machine to focus on identifying the target objects, ignoring irrelevant factors. This process ensured the classifier's robustness in recognizing items in real-world settings.
+            The training process includes image screening and format unification. In the process of training, we performed several iterative training to improve the ability of the model to accurately distinguish categories. This iterative process involves analyzing the image content that has been provided to the model and the accuracy using current photos.
         </p>
-        <p>
-            Several iterations of training were performed, refining the model's ability to accurately distinguish between categories. This iterative process involved analyzing the model's performance and making adjustments to optimize its learning.
-        </p>
-        <div class="image-container">
-            <img src="Process2.jpg" alt="Process 2: Model Training" />
-        </div>
         <h3>3. Model Testing and Deployment</h3>
         <p>
-            After training, the model underwent extensive testing using a separate dataset to evaluate its accuracy and reliability. 
+            After training, the model underwent several testing using a separate dataset to evaluate its accuracy and reliability. 
         </p>
         <p>
             On the website, users can upload images or use their webcam to test the model, allowing them to experience the application firsthand. 
         </p>
-    </main>
+        <p>
+           Here is a video introducing our model and testing our model.
+        </p>
+        <!-- 
+            Embedded Video:
+            - Displays the video "TM.mp4" to introduce and test the model.
+            - Includes controls for user interaction and accessibility.
+        -->
+        <video width="640" height="360" controls>
+            <source src="TM.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+     </main>
+
+
+    
+    <!-- 
+        Footer Section:
+        - Credits the team members responsible for the project.      .
+    -->
     <footer>
         &copy; LIS 500 Project 3. Ruihan YANG, Wensha NIE, and Keke SONG.
     </footer>

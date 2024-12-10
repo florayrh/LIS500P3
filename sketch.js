@@ -9,7 +9,8 @@ let video;
 let label = "waiting...";
 // The classifier
 let classifier;
-let modelURL = 'https://teachablemachine.withgoogle.com/models/YS8x2ree7/';
+let modelURL = 'https://teachablemachine.withgoogle.com/models/r-SgIuQ2G/';
+
 // STEP 1: Load the model!
 function preload() {
   classifier = ml5.imageClassifier(modelURL + 'model.json');
@@ -44,12 +45,12 @@ function draw() {
 
   // Pick an emoji, the "default" is train
   let emoji = "😁";
-  if (label == "Mask") {
+  if (label == "mask") {
     emoji = "😷";
-  } else if (label == "Thermometer") {
-     emoji ="🌡️";
-  } else if (label == "Medicine") {
+  } else if (label == "medicine") {
     emoji = "💊";
+  } else if (label == "Thermometer") {
+    emoji = "🌡️";
   }
 
   // Draw the emoji
@@ -64,7 +65,6 @@ function gotResults(error, results) {
     console.error(error);
     return;
   }
-  
   // Store the label and classify again!
   label = results[0].label;
   classifyVideo();

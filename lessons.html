@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 
+        Metadata:
+        - Sets character encoding to UTF-8 to support diverse characters.
+        - Includes a viewport tag to ensure responsive design on all devices.
+        - Sets the page title to "Lessons Learned" to reflect the content.
+        - Links to a shared stylesheet for consistent styling across the site.
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lessons Learned</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- 
+        Navigation Bar:
+        - Includes links to key sections of the website for seamless navigation.
+        - Uses consistent styling across all pages to improve user experience.
+    -->
     <nav>
         <a href="index.html">Home</a>
         <a href="objective.html">Project Name & Objective</a>
@@ -16,33 +28,66 @@
         <a href="try.html">Try the Project</a>
     </nav>
     <main>
-        <h1>Lessons Learned from <i>Unmasking AI</i></h1>
+        <!-- 
+            Main Section:
+            - Contains a heading to introduce the topic of lessons learned.
+            - Includes the integrated project reflection content.
+        -->
+        <h1>Lessons Learned from Project</h1>
+        
         <p>
-            Joy Buolamwini’s book, <i>Unmasking AI</i>, served as a profound guide for us as we developed the Medical Supplies Classifier project. In her work, she emphasizes that artificial intelligence systems are not neutral tools but reflections of the values, assumptions, and biases of their creators. This insight influenced every stage of our project, from data collection to model evaluation, as we sought to create a system that was not only functional but also ethical, transparent, and fair.
+            Artificial intelligence (AI) development often assumes neutrality, focusing on efficiency and technical excellence. However, Joy Buolamwini’s <i>Unmasking AI</i> challenges this assumption, exposing the deeply embedded biases within AI systems and their broader societal implications. This critical perspective influenced the development of our Medical Supplies Classifier, not as a direct application of her arguments about human recognition biases, but as a framework to examine how ethical principles in AI can apply across domains, including non-human object classification.
+        </p>
+
+        <h2>Implicit Bias and <i>Unmasking AI</i></h2>
+        <p>
+            Buolamwini’s <i>Unmasking AI</i> emphasizes that artificial intelligence systems are never neutral. They encode the values of their creators, reflecting both implicit and explicit biases. Implicit bias is a recurring theme in <i>Unmasking AI</i> and in course readings. 
         </p>
         <p>
-            Buolamwini also highlights the importance of addressing power dynamics in AI design, pointing out that AI systems reflect the priorities of the institutions and individuals behind them. For our project, this prompted us to evaluate not just the regional representation of medical supplies but also the structural decisions made during the model’s training process. For instance, we considered how variations in image quality, lighting, and background environments could unintentionally favor certain conditions over others. High-quality images with consistent lighting, often sourced from professional databases, were easier for the model to classify accurately. However, this raised concerns about how well the classifier would perform in real-world scenarios, where images may be taken in suboptimal conditions, such as dim lighting or cluttered settings. By introducing a range of image types during training, we aimed to build a model better equipped to handle diverse use cases. Even so, we acknowledge that achieving complete fairness remains a challenge, and some biases may persist due to limitations in our training data.
+            Although our classifier was not designed for facial recognition, this principle guided us to critically evaluate our dataset and development process. For example, we recognized that the medical supply images in our dataset were primarily sourced from professional online pictures, which often feature standardized, well-lit images. This created a potential bias: our model performed well in controlled environments but struggled with images captured in real-world conditions. This limitation aligns with Buolamwini’s critique of how AI systems tend to favor idealized inputs, often at the expense of marginalized users. According to Buolamwini, "Bias in AI systems isn’t only about who is excluded but also about who benefits from the design choices we make." In our case, professional images were inadvertently privileged, raising concerns about the accessibility of our classifier for users in resource-constrained environments. Acknowledging this, we expanded our dataset by including images we captured under suboptimal lighting conditions using basic cameras. However, we recognize that these efforts remain insufficient to fully address this structural imbalance.
         </p>
         <p>
-            Transparency was another critical lesson from <i>Unmasking AI</i>. Buolamwini criticizes the lack of transparency in many AI systems, especially those developed by large corporations, which often operate as "black boxes." She argues that making AI systems accessible and understandable to the public is essential for building trust. Inspired by this, we documented each step of our development process in detail, from the creation of our dataset to the evaluation of the model’s performance. This documentation is not only an internal tool for tracking our decisions but also a resource for future iterations or external assessments. While we do not currently offer direct feedback mechanisms or interactive tools for public testing, we believe that transparency in our methodology ensures that the project can be critiqued and refined by others in the field.
+            Additionally, multipurpose masks used in medicine and industry presented classification challenges because the model had difficulty reconciling ambiguous inputs. Instead of enforcing strict categories, we allowed users to define their own categories. This decision reflects Buolamwini's call for adaptive systems that "acknowledge ambiguity rather than impose false certainty."
+        </p>
+
+        <h2>Intersectionality and <i>Unmasking AI</i></h2>
+        <p>
+            We also considered the concept of intersectionality. <i>Unmasking AI</i> critiques how AI systems often fail to account for the overlapping dimensions of identity and power. Shapiro's critique of intersectionality also highlights the complexity of navigating overlapping identity and power structures, even in technological systems. While intersectionality typically examines human identities, we adopted this framework to explore systemic inequities in the representation of medical supplies. For example, due to cultural practices, economic factors, and regulatory standards, the design and labeling of medical supplies often vary significantly by region. In low-income regions, thermometer packaging may lack the standardized features found in wealthier areas, making it harder for the classifier to recognize these items.
         </p>
         <p>
-            Another critical concept from <i>Unmasking AI</i> is intersectionality, a framework that examines how overlapping systems of oppression, such as racism, sexism, and classism, can manifest in AI systems. Buolamwini argues that technologies developed without considering intersectionality risk marginalizing certain groups. In our project, we applied this lens by examining how the classifier performed for different combinations of attributes. For example, we tested whether the system could accurately identify medical supplies from regions with distinct packaging standards or unique cultural designs. While we made adjustments to address some disparities, we acknowledge that our approach was limited by the scope of our data and resources. For instance, while we included diverse examples of common medical supplies like masks and thermometers, we could not account for all the variations that exist worldwide. This limitation reinforces the importance of ongoing evaluation and iteration to ensure the system continues to improve over time.
+            We believe that ignoring intersectionality reinforces existing hierarchies of power, further marginalizing those who are already on the fringes. By incorporating packaging variations from different regions, such as the United States, China, Europe, Australia, Japan, and South Korea, we aimed to make the classifier more inclusive. However, our dataset still lacked sufficient representation from certain regions, such as parts of Africa and Southeast Asia. We are deeply aware of this gap and acknowledge that it exacerbates the broader challenge of building globally equitable AI systems.
         </p>
+
+        <h2>Transparency and Accountability</h2>
         <p>
-            Despite our efforts, we faced challenges in balancing accuracy, fairness, and feasibility. One trade-off involved the classification of ambiguous cases. For example, certain products, like multipurpose masks used both industrially and medically, posed difficulties for binary classification. Instead of forcing strict categories, we provided users with the ability to flag uncertain cases, allowing for greater flexibility and avoiding potentially misleading results. However, this approach also highlighted the complexity of designing AI systems that can adapt to nuanced, real-world scenarios.
+            One of the most influential criticisms in <i>Unmasking AI</i> is the opacity of AI systems. Buolamwini describes the "black box problem," arguing that "the design of systems without transparency obfuscates accountability and makes it difficult to question their output." This insight prompted us to document the development of our classifier extensively. We detailed every decision, from data collection to model evaluation, ensuring that our approach could be carefully reviewed and improved. However, transparency is only one part of accountability. As Sensoy and DiAngelo emphasize in <i>A Reading Guide to Discussing White People</i>, "Acknowledging systemic power imbalances requires action, not just awareness." While our documentation provides a basis for critique, we lack mechanisms for real-time user feedback or interactive error reporting. This limits our ability to address bias when it arises.
         </p>
+
+        <h2>Challenges and Lessons</h2>
+        <ul>
+            <li>Images with cluttered or diverse backgrounds were often misclassified, as the model prioritized clear, isolated objects.</li>
+            <li>Packaging designs and labeling conventions from certain regions were insufficiently represented, limiting the classifier’s applicability in global contexts.</li>
+            <li>Many medicines are packaged in boxes, making it difficult for the model to differentiate between box-packaged medicines and other box-packaged products.</li>
+        </ul>
         <p>
-            Buolamwini’s book also encouraged us to think critically about the broader implications of our work. She argues that AI development is not just a technical endeavor but a moral one, requiring developers to consider how their systems shape and are shaped by society. This perspective influenced how we positioned our project as not merely a tool for identifying medical supplies but also as an educational resource for raising awareness about algorithmic bias and fairness. By openly discussing the limitations and ethical considerations of our classifier, we aimed to contribute to the broader conversation about responsible AI development.
+            We also realized that optimizing for technical accuracy often conflicted with broader fairness goals, such as ensuring inclusivity across diverse image sources.
         </p>
+
+        <h2>Beyond the Technical: The Moral Imperative of AI</h2>
         <p>
-            One of the most important lessons we learned is that addressing bias in AI is not a one-time effort but an ongoing process. Models must be continuously evaluated and updated as societal norms evolve and as new data becomes available. Moreover, achieving algorithmic fairness requires more than technical solutions; it demands societal engagement, policy interventions, and a willingness to challenge existing power dynamics. In the context of our project, this means not only refining the classifier’s performance but also ensuring that its design and application reflect a commitment to inclusivity and justice.
+            Buolamwini’s most compelling argument is that the development of artificial intelligence is inherently a moral endeavor. She argues that the systems we create shape society and are, in turn, shaped by it. This perspective reframed our project not merely as a tool for identifying medical supplies but as a contribution to the broader discourse on responsible AI. By openly discussing the limitations of our classifier, we aim to foster critical conversations about bias, fairness, and accountability. In our context, this means designing a system that serves not only the majority but also those in marginalized positions. While our classifier is far from perfect, it represents a step toward realizing this vision.
         </p>
+
+        <h2>Conclusion</h2>
         <p>
-            Ultimately, <i>Unmasking AI</i> taught us that building ethical AI systems is both a challenge and a necessity. It requires humility, vigilance, and a dedication to amplifying the voices of those who have historically been marginalized. While our project is far from perfect, it represents a step toward creating technology that is not only functional but also equitable and transparent. As we continue to refine our work, we hope to apply the lessons learned here to future endeavors, contributing to a broader movement for algorithmic justice.
+            The development of the Medical Supplies Classifier was both a technical challenge and an ethical journey. These lessons taught us that ethical AI is not only about achieving perfection but about committing to continuous reflection, critique, and improvement. The promise of AI lies not in its power but in our ability to wield it responsibly, with humility and justice. Our project embodies this ethos, striving to balance functionality with fairness and transparency. As we move forward, we hope to build on these lessons, contributing to a future where AI serves all of humanity, not just the privileged few.
         </p>
     </main>
     <footer>
+        <!-- Footer Section: 
+             - Credits the team members involved.
+             - Uses consistent styling across pages.
+        -->
         &copy; LIS 500 Project 3. Ruihan YANG, Wensha NIE, and Keke SONG.
     </footer>
 </body>

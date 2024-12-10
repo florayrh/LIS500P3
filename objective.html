@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 
+        - Sets character encoding to UTF-8 for proper rendering of text.
+        - Includes a meta tag for responsive design, ensuring optimal display on different devices.
+        - Sets the page title to "Project Objective" for identification in browser tabs.
+        - Links to the external CSS file 'styles.css' to maintain consistent styling across all pages.
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Objective</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- 
+        Navigation bar:
+        - Provides quick access to other sections of the project website.
+        - Includes links to pages like Home, Project Objective, Machine Learning, Design Process, Lessons Learned, and Try the Project.
+        - Maintains the same structure as the homepage for consistency in navigation across the website.
+    -->
     <nav>
         <a href="index.html">Home</a>
         <a href="objective.html">Project Name & Objective</a>
@@ -15,15 +27,34 @@
         <a href="lessons.html">Lessons Learned</a>
         <a href="try.html">Try the Project</a>
     </nav>
+    
     <main>
+        <!-- 
+            Main section:
+            - Introduces the core topic of the page with an H1 title "Medical Supplies Classifier."
+            - Provides a clear and concise project objective.
+            - The objective text is styled using the <strong> tag to emphasize its importance and make it stand out visually.
+        -->
         <h1>Medical Supplies Classifier</h1>
         <p>
             <strong>Objective:</strong> Our goal is to develop a simple yet effective AI classifier to identify common medical supplies, such as masks, thermometers, and medicines. This project seeks to demonstrate the practical application of machine learning in everyday life while promoting awareness and education about medical tools that are crucial in healthcare and emergency scenarios.
         </p>
+        
+        <!-- 
+            Section detailing project significance:
+            - Explains why the project matters by highlighting potential real-world applications.
+            - Uses an H2 title for the section "Significance of the Project" for proper semantic structure and accessibility.
+        -->
         <h2>Significance of the Project</h2>
         <p>
-            The Medical Supplies Classifier is a step towards utilizing artificial intelligence for the benefit of public health. As machine learning technology advances, we envision expanding this project to a variety of real-world application scenarios, such as
+            The Medical Supplies Classifier is a step towards utilizing artificial intelligence for the benefit of public health. As machine learning technology advances, we envision expanding this project to a variety of real-world application scenarios, such as:
         </p>
+        
+        <!-- 
+            List of real-world applications:
+            - Uses an unordered list (<ul>) to present key use cases for the classifier.
+            - Each list item (<li>) includes a brief explanation of a specific application area, such as pandemic response, education, and supply chain management.
+        -->
         <ul>
             <li>
                 Streamlining the classification of medical supplies during a pandemic: In critical situations such as the COVID-19 pandemic, efficiently classifying and identifying medical supplies can save time and ensure that essential items get to the people who need them. This classifier can help automate the sorting process, reducing labor and errors.
@@ -36,8 +67,13 @@
             </li>
         </ul>
     </main>
+    
+    <!-- 
+        Footer section:
+        - Credits the team members responsible for the project.
+    -->
     <footer>
-        &copy; LIS 500 Project 3. Ruihan YANG, Wensha NIE, Keke SONG.
+        &copy; LIS 500 Project 3. Ruihan YANG, Wensha NIE, and Keke SONG.
     </footer>
 </body>
 </html>

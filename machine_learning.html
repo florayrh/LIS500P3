@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 
+        Document metadata:
+        - Sets the character encoding to UTF-8 to support a wide range of text characters.
+        - Adds a meta viewport tag to ensure the page is responsive and adapts to different screen sizes.
+        - Sets the page title to "What is Machine Learning?" to identify the content of this specific page.
+        - Links to the external stylesheet 'styles.css' for consistent design across the website.
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What is Machine Learning?</title>
@@ -8,6 +15,12 @@
 </head>
 <body>
 
+    <!-- 
+        Navigation bar:
+        - Provides a consistent navigation structure across all pages of the website.
+        - Contains links to the key pages. 
+        - Ensures users can seamlessly move between sections to explore project content.
+    -->
     <nav>
         <a href="index.html">Home</a>
         <a href="objective.html">Project Name & Objective</a>
@@ -16,7 +29,13 @@
         <a href="lessons.html">Lessons Learned</a>
         <a href="try.html">Try the Project</a>
     </nav>
+    
     <main>
+        <!-- 
+            Main content:
+            - Introduces Machine Learning (ML) with an H1 title, establishing the page's focus.
+            - Provides a brief explanation of ML.
+        -->
         <h1>Introduction to Machine Learning</h1>
         <p>
             Machine Learning (ML) is a branch of artificial intelligence that enables computers to learn patterns from data and make decisions without explicit programming. In this project, we explore supervised learning, a core aspect of ML, to train a teachable machine that classifies medical supplies like masks, thermometers, and medicines.
@@ -24,6 +43,14 @@
         <p>
             The video below provides a practical introduction to Teachable Machines. This foundational knowledge supports the development of our Medical Supplies Classifier.
         </p>
+        
+        <!-- 
+            Algorithm explanation section:
+            - Uses an H2 title to introduce the algorithm explanation.
+            - Embeds a YouTube video that demonstrates the process behind teachable machines and image classification.
+            - The video is placed inside a <div> with a class 'video-container' for easier styling and responsive design.
+            - The <iframe> is configured with accessibility attributes and responsive settings.
+        -->
         <h2>Learn About the Algorithm</h2>
         <div class="video-container">
             <iframe width="560" height="315" 
@@ -34,12 +61,14 @@
                 allowfullscreen>
             </iframe>
         </div>
-
     </main>
+    
+    <!-- 
+        Footer section:
+        - Credits the team members involved in the project.
+    -->
     <footer>
         &copy; LIS 500 Project 3. Ruihan YANG, Wensha NIE, and Keke SONG.
     </footer>
 </body>
 </html>
-
-
